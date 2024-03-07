@@ -56,3 +56,70 @@ body {
 color: #fff!important;
 background-color: rgba(156, 39, 176, 0.6) !important;
 }
+
+
+
+/* navbar css */
+
+  #navbar {
+    position: fixed;
+    top: -85px; /* Hiding the navbar initially */
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 100px !important;
+
+    transition: top 0.3s;
+  }
+  
+  #navbar nav {
+    display: flex;
+    width: 90%;
+    background-color: #ffffffac;
+    border-radius: 50px;
+    
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 70px !important;
+  }
+  
+ 
+  
+  #navbar a {
+    color: #1d1c1c;
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+  
+  #content {
+    height: 1500px; /* Just for demonstration */
+  }
+  
+
+  @keyframes sparkle {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  #copiedMessage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 5px;
+    animation: sparkle 1s ease-out; /* Define the animation */
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  
