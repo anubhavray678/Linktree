@@ -10,6 +10,12 @@
     <link rel="script" type="text/javascript" href="script.js" />
     <link rel="stylesheet" href="style.css" />
     <title>Anubhav Ray</title>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("FPqQ1O4OvEo37D7UC");
+      })();
+    </script>
   </head>
 
   <body class="w3-white">
@@ -140,31 +146,34 @@
     >
       <div class="w3-content" style="max-width: 500px">
         <h4 class="w3-center"><b>Get in touch.</b></h4>
-        <form action="/action_page.php" target="_blank">
+        <form action="" target="_blank" id="contactForm">
           <div class="w3-section">
-            <label>Name</label>
+            <label for="name">Name</label>
             <input
               class="w3-input w3-border w3-opacity-min"
               type="text"
-              name="Name"
+              id="name"
+              name="first_name"
               required
             />
           </div>
           <div class="w3-section">
-            <label>Email</label>
+            <label for="email">Email</label>
             <input
               class="w3-input w3-border w3-opacity-min"
-              type="text"
-              name="Email"
+              type="email"
+              id="email"
+              name="from_email"
               required
             />
           </div>
           <div class="w3-section">
-            <label>Message</label>
+            <label for="message">Message</label>
             <input
               class="w3-input w3-border w3-opacity-min"
               type="text"
-              name="Message"
+              id="message"
+              name="message"
               required
             />
           </div>
@@ -179,6 +188,7 @@
     </div>
     <div id="copiedMessage" class="hidden">Link copied!</div>
     <!-- Hidden by default -->
+    <div id="statusMessage"></div>
     <script src="script.js"></script>
   </body>
 </html>

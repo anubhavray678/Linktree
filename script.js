@@ -22,4 +22,30 @@ document.getElementById("iconLink").addEventListener("click", function (event) {
   link.click();
 });
 
-//
+// email-js
+
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Get the user's input from the form
+    let formData = {
+      name: this.name.value,
+      email: this.email.value,
+      message: this.message.value,
+    };
+
+    // Send the email
+    emailjs.send("service_et75iw9", "template_ngcbjol", formData).then(
+      function (response) {
+        alert("Your message has been sent successfully!");
+        // Clear the form fields after successful submission
+        document.getElementById("contactForm").reset();
+      },
+      function (error) {
+        console.error("Failed to send email. Error:", error);
+        alert("Oops! Something went wrong. Please try again later.");
+      }
+    );
+  });
