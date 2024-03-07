@@ -45,11 +45,14 @@ body {
 .link {
     width: 100%;
   }
+  
 }
 @media (min-width: 576px) {
 .container {
     max-width: 540px;
   }
+ 
+  
 }
 
 .w3-purple, .w3-hover-purple:hover {
@@ -85,9 +88,12 @@ background-color: rgba(156, 39, 176, 0.6) !important;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    margin-bottom: 70px !important;
+    /* margin-bottom: 70px !important; */
   }
   
+  .name-text{
+    font-size: 30px;
+  }
  
   
   #navbar a {
@@ -122,4 +128,9 @@ background-color: rgba(156, 39, 176, 0.6) !important;
     display: none;
   }
 
-  
+  @media screen and (max-width: 480px) {
+    .name-text{
+        font-size: 20px;
+      }
+     
+  }
